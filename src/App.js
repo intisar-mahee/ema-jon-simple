@@ -5,6 +5,7 @@ import Product from './components/Product/Product';
 import Shop from './components/Shop/Shop';
 import Review from './components/Review/Review'
 import Inventory from './components/Inventory/Inventory'
+import ProductDetail from './components/ProductDetail/ProductDetail'
 
 import {
   BrowserRouter as Router,
@@ -28,6 +29,9 @@ function App() {
             </Route>
             <Route path='/manage'>
             <Inventory></Inventory>
+            </Route>
+            <Route path="/product/:productKey">
+              <ProductDetail></ProductDetail>
             </Route>
             <Route path='*'>
                           <Notfound></Notfound>
